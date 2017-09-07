@@ -1,0 +1,25 @@
+{
+  "name": "academicDegree",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "academicDegree": {
+      "type": "string",
+      "id": true,
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "questions": {
+      "type": "hasMany",
+      "model": "question",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,66 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "question": {
+    "dataSource": "mongoDB",
+    "public": true
+  },
+  "answer": {
+    "dataSource": "mongoDB",
+    "public": true
+  },
+  "subject": {
+    "dataSource": "mongoDB",
+    "public": true
+  },
+  "difficulty": {
+    "dataSource": "mongoDB",
+    "public": true
+  },
+  "questionType": {
+    "dataSource": "mongoDB",
+    "public": true
+  },
+  "questionText": {
+    "dataSource": "mongoDB",
+    "public": true
+  },
+  "academicDegree": {
+    "dataSource": "mongoDB",
+    "public": true
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "name": "question",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "statement": {
+      "type": "string",
+      "required": true
+    },
+    "isApproved": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "subject": {
+      "type": "belongsTo",
+      "model": "subject",
+      "foreignKey": ""
+    },
+    "answers": {
+      "type": "embedsMany",
+      "model": "answer",
+      "property": "possibleAnswers"
+    },
+    "difficulty": {
+      "type": "belongsTo",
+      "model": "difficulty",
+      "foreignKey": ""
+    },
+    "questionType": {
+      "type": "belongsTo",
+      "model": "questionType",
+      "foreignKey": ""
+    },
+    "questionText": {
+      "type": "belongsTo",
+      "model": "questionText",
+      "foreignKey": ""
+    },
+    "academicDegree": {
+      "type": "belongsTo",
+      "model": "academicDegree",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
